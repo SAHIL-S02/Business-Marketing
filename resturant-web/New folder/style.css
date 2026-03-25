@@ -1,0 +1,110 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    background-color: #ff5733;
+    color: white;
+    padding: 20px;
+}
+
+nav {
+    background: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.card {
+    background: white;
+    margin: 10px auto;
+    padding: 15px;
+    width: 200px;
+    border-radius: 10px;
+}
+button {
+    background-color: #ff5733;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f9f9f9;
+}
+
+header {
+    background: linear-gradient(to right, #ff5733, #ff8d1a);
+    color: white;
+    padding: 30px;
+}
+
+nav {
+    background: #222;
+    padding: 12px;
+}
+
+nav a {
+    color: white;
+    margin: 15px;
+    font-weight: bold;
+}
+
+.card {
+    background: white;
+    margin: 15px auto;
+    padding: 20px;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+@media (max-width: 600px) {
+    .card {
+        width: 90%;
+    }
+}
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: green;
+    color: white;
+    padding: 12px;
+    border-radius: 50px;
+    text-decoration: none;
+}
+button {
+    background-color: #ff5733;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e04e2a;
+}

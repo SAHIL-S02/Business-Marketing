@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Foodie Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <h1>🍽️ Foodie Restaurant</h1>
+    <p>Delicious Food, Happy Mood!</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h2>Welcome to the Best Restaurant in Town</h2>
+    <p>Fresh food | Fast delivery | Great taste</p>
+    <button>Order Now</button>
+</section>
+
+<!-- Menu -->
+<section id="menu">
+    <h2>Our Menu</h2>
+
+    <div class="menu-container">
+        <div class="card">
+            🍕 Pizza - ₹200 <br><br>
+            <button onclick="orderItem('Pizza')">Order Now</button>
+        </div>
+
+        <div class="card">
+            🍔 Burger - ₹150 <br><br>
+            <button onclick="orderItem('Burger')">Order Now</button>
+        </div>
+
+        <div class="card">
+            🍝 Pasta - ₹180 <br><br>
+            <button onclick="orderItem('Pasta')">Order Now</button>
+        </div>
+    </div>
+</section>
+
+<!-- Reviews -->
+<section id="reviews">
+    <h2>Customer Reviews</h2>
+
+    <div class="menu-container">
+        <div class="card">⭐⭐⭐⭐⭐ <br> Amazing food!</div>
+        <div class="card">⭐⭐⭐⭐ <br> Loved the service!</div>
+        <div class="card">⭐⭐⭐⭐⭐ <br> Highly recommended!</div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name" required><br><br>
+        <input type="email" placeholder="Your Email" required><br><br>
+        <textarea placeholder="Your Message" required></textarea><br><br>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<!-- WhatsApp -->
+<a href="https://wa.me/919876543210" class="whatsapp" target="_blank">
+    💬
+</a>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Foodie Restaurant | All Rights Reserved</p>
+</footer>
+
+<script>
+function orderItem(item) {
+    alert("You ordered: " + item);
+}
+</script>
+
+</body>
+</html>
