@@ -14,7 +14,7 @@ const OrderForm = () => {
     budget: '',
     message: ''
   });
-  
+
   const [status, setStatus] = useState({ loading: false, success: false, error: null });
 
   const handleChange = (e) => {
@@ -52,7 +52,7 @@ const OrderForm = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="md:w-1/2">
           <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 p-8">
             {status.success ? (
@@ -68,9 +68,9 @@ const OrderForm = () => {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-semibold text-slate-700 mb-1">Your Name</label>
-                    <input 
+                    <input
                       required
-                      type="text" 
+                      type="text"
                       name="clientName"
                       value={formData.clientName}
                       onChange={handleChange}
@@ -80,9 +80,9 @@ const OrderForm = () => {
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-slate-700 mb-1">Email</label>
-                    <input 
+                    <input
                       required
-                      type="email" 
+                      type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
@@ -94,9 +94,9 @@ const OrderForm = () => {
 
                 <div>
                   <label className="block text-sm font-semibold text-slate-700 mb-1">Business Name</label>
-                  <input 
+                  <input
                     required
-                    type="text" 
+                    type="text"
                     name="businessName"
                     value={formData.businessName}
                     onChange={handleChange}
@@ -104,11 +104,11 @@ const OrderForm = () => {
                     placeholder="Acme Corp"
                   />
                 </div>
-                
+
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-semibold text-slate-700 mb-1">Service Type</label>
-                    <select 
+                    <select
                       required
                       name="serviceType"
                       value={formData.serviceType}
@@ -123,21 +123,21 @@ const OrderForm = () => {
                     </select>
                   </div>
                   <div>
-                     <label className="block text-sm font-semibold text-slate-700 mb-1">Budget</label>
-                     <input 
-                      type="number" 
+                    <label className="block text-sm font-semibold text-slate-700 mb-1">Budget</label>
+                    <input
+                      type="number"
                       name="budget"
                       value={formData.budget}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 outline-none"
-                      placeholder="$ USD"
+                      placeholder="₹ INR"
                     />
                   </div>
                 </div>
 
                 <div>
                   <label className="block text-sm font-semibold text-slate-700 mb-1">Project Details</label>
-                  <textarea 
+                  <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
@@ -146,15 +146,15 @@ const OrderForm = () => {
                     placeholder="What are your main goals?"
                   ></textarea>
                 </div>
-                
+
                 {status.error && (
                   <div className="p-3 rounded bg-red-50 text-red-600 text-sm border border-red-200">
                     {status.error}
                   </div>
                 )}
-                
-                <button 
-                  type="submit" 
+
+                <button
+                  type="submit"
                   disabled={status.loading}
                   className="w-full py-4 px-6 bg-slate-900 hover:bg-blue-600 text-white font-bold rounded-lg shadow-lg flex items-center justify-center gap-2 transition-all duration-300 disabled:opacity-70 mt-2"
                 >

@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
   const navigate = useNavigate();
 
   // Set dynamic axios base URL for Vercel
-  axios.defaults.baseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+  axios.defaults.baseURL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     // Check local storage for user object

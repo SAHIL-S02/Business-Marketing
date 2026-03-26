@@ -36,15 +36,15 @@ const Admin = () => {
   }, []);
 
   const filteredOrders = orders.filter(
-    order => 
-      order.businessName.toLowerCase().includes(searchTerm.toLowerCase()) || 
+    order =>
+      order.businessName.toLowerCase().includes(searchTerm.toLowerCase()) ||
       order.clientName.toLowerCase().includes(searchTerm.toLowerCase()) ||
       order.serviceType.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const filteredUsers = usersList.filter(
-    u => 
-      u.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+    u =>
+      u.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       u.email.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -56,7 +56,7 @@ const Admin = () => {
             <h1 className="text-3xl font-extrabold text-slate-900">Admin Command Center</h1>
             <p className="text-slate-600">Logged in as: <span className="font-semibold text-blue-600">{user?.name}</span></p>
           </div>
-          <button 
+          <button
             onClick={fetchData}
             className="flex items-center gap-2 px-4 py-2 bg-white text-slate-700 border border-slate-300 rounded-lg hover:bg-slate-50 transition-colors shadow-sm w-fit"
           >
@@ -67,13 +67,13 @@ const Admin = () => {
 
         {/* Custom Tabs */}
         <div className="flex space-x-2 mb-6 border-b border-slate-300">
-          <button 
+          <button
             onClick={() => setActiveTab('orders')}
             className={`px-6 py-3 font-semibold text-sm rounded-t-lg transition-colors flex items-center gap-2 ${activeTab === 'orders' ? 'bg-white text-blue-600 border-t border-l border-r border-slate-300' : 'text-slate-500 hover:text-slate-700'}`}
           >
             <FileText className="h-4 w-4" /> All Orders ({orders.length})
           </button>
-          <button 
+          <button
             onClick={() => setActiveTab('users')}
             className={`px-6 py-3 font-semibold text-sm rounded-t-lg transition-colors flex items-center gap-2 ${activeTab === 'users' ? 'bg-white text-blue-600 border-t border-l border-r border-slate-300' : 'text-slate-500 hover:text-slate-700'}`}
           >
@@ -84,8 +84,8 @@ const Admin = () => {
         <div className="bg-white rounded-xl shadow-md border border-slate-200 overflow-hidden mb-8">
           <div className="p-4 border-b border-slate-200 flex items-center gap-3 bg-slate-50">
             <Search className="text-slate-400 h-5 w-5" />
-            <input 
-              type="text" 
+            <input
+              type="text"
               placeholder={`Search ${activeTab}...`}
               className="bg-transparent border-none outline-none w-full text-slate-700 placeholder-slate-400"
               value={searchTerm}
@@ -132,7 +132,7 @@ const Admin = () => {
                           </span>
                         </td>
                         <td className="py-4 px-6 text-slate-600 font-medium">
-                          {order.budget ? `$${order.budget}` : 'None'}
+                          {order.budget ? `₹${order.budget}` : 'None'}
                         </td>
                         <td className="py-4 px-6 text-sm text-slate-500 whitespace-nowrap">
                           {new Date(order.createdAt).toLocaleDateString()}
