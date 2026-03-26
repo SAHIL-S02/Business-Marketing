@@ -24,6 +24,16 @@ app.use(express.json());
 app.use("/api/orders", orderRoutes);
 app.use("/api/auth", authRoutes);
 
+// --- MONOLITHIC RENDER: SERVE COMPILED REACT FRONTEND ---
+const path = require("path");
+
+// Safely bypasses the API and points every request explicitly to the Vite compiled JS/CSS objects
+app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
+});
+// --------------------------------------------------------
 const { MongoMemoryServer } = require('mongodb-memory-server');
 
 // Database Connection
