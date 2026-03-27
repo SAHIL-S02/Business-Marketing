@@ -30,7 +30,7 @@ const path = require("path");
 // Safely bypasses the API and points every request explicitly to the Vite compiled JS/CSS objects
 app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
-app.get("*", (req, res) => {
+app.get(/(.*)/, (req, res) => {
   res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
 });
 // --------------------------------------------------------
@@ -41,10 +41,10 @@ const startServer = async () => {
   try {
     const mongoServer = await MongoMemoryServer.create();
     const mongoUri = mongoServer.getUri();
-    
+
     await mongoose.connect(mongoUri);
     console.log('In-memory MongoDB Connected successfully.');
-    
+
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
     });
@@ -53,4 +53,4 @@ const startServer = async () => {
   }
 };
 
-startServer();
+startServer();  
