@@ -8,7 +8,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Rocket className="h-6 w-6 text-blue-500" />
-              <span className="font-bold text-xl text-white">ElevateDigital</span>
+              <span className="font-bold text-xl text-white">Business Marketing</span>
             </div>
             <p className="text-sm text-slate-400 mb-4 max-w-xs">
               A student-led digital marketing agency dedicated to accelerating businesses with dynamic and measurable scaling strategies.
@@ -27,19 +27,19 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm">
-                <Mail className="h-4 w-4 text-blue-500" /> hello@elevatedigital.edu
+                <Mail className="h-4 w-4 text-blue-500" /> hello@businessmarketing.edu
               </li>
               <li className="flex items-center gap-2 text-sm">
-                <Phone className="h-4 w-4 text-blue-500" /> 1-800-ELEVATE
+                <Phone className="h-4 w-4 text-blue-500" /> 96473 97722
               </li>
               <li className="flex items-center gap-2 text-sm">
-                <MapPin className="h-4 w-4 text-blue-500" /> 123 University Ave, Silicon Valley
+                <MapPin className="h-4 w-4 text-blue-500" /> Barast, Kolkata, 700124
               </li>
             </ul>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-slate-800 text-center text-sm text-slate-500">
-          &copy; {new Date().getFullYear()} ElevateDigital. All rights reserved.
+          &copy; {new Date().getFullYear()} Business Marketing. All rights reserved.
         </div>
       </div>
     </footer>

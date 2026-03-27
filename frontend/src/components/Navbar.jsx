@@ -33,7 +33,7 @@ const Navbar = () => {
             <Link to="/" className="flex items-center gap-2">
               <Rocket className="h-8 w-8 text-blue-600" />
               <span className="font-bold text-xl tracking-tight text-slate-900">
-                Elevate<span className="text-blue-600">Digital</span>
+                Business<span className="text-blue-600"> Marketing</span>
               </span>
             </Link>
           </div>
