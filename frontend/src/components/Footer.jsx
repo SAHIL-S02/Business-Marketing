@@ -27,7 +27,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-white mb-4">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm">
-                <Mail className="h-4 w-4 text-blue-500" /> hello@businessmarketing.edu
+                <Mail className="h-4 w-4 text-blue-500" /> sksahilu735@gmail.com
               </li>
               <li className="flex items-center gap-2 text-sm">
                 <Phone className="h-4 w-4 text-blue-500" /> 96473 97722
