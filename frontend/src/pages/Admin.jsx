@@ -19,8 +19,8 @@ const Admin = () => {
       setError(null);
       // Because axios defaults have the Bearer token, we just hit the endpoints
       const [ordersRes, usersRes] = await Promise.all([
-        axios.get('/orders'),
-        axios.get('/auth/users')
+        axios.get('/api/orders'),
+        axios.get('/api/auth/users')
       ]);
       setOrders(ordersRes.data);
       setUsersList(usersRes.data);

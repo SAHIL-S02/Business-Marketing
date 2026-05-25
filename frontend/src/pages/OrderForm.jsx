@@ -26,7 +26,7 @@ const OrderForm = () => {
     setStatus({ loading: true, success: false, error: null });
 
     try {
-      await axios.post('/orders', formData);
+      await axios.post('/api/orders', formData);
       setStatus({ loading: false, success: true, error: null });
       setFormData({ clientName: user?.name || '', email: user?.email || '', businessName: '', serviceType: '', budget: '', message: '' });
       setTimeout(() => setStatus(prev => ({ ...prev, success: false })), 5000);
